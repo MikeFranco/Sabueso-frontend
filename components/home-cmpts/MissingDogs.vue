@@ -8,9 +8,17 @@
             <img class="dog-img" :src="dog.img">
             <div class="dog-name" > {{dog.name}} </div>
             <div class="dog-extra-data">
-            {{dog.age}}
-            {{dog.size}}
-            {{dog.description}}
+              {{dog.age}}
+              {{dog.size}}
+              {{dog.description}}
+              <!-- <Map
+                appId="DPVmzC3KXrz9Bk3wzpfR"
+                appCode="xpxcR1OHlqPK043UfzNHZQ"
+                lat="37.7397"
+                lng="-121.4252"
+                width="10%"
+                height="83px" 
+              /> -->
             </div>
           </div>
         </div>
@@ -20,6 +28,7 @@
 </template>
 
 <script>
+import Map from '../generic-cmpts/Map.vue';
 export default {
   data(){
     return {
@@ -31,7 +40,8 @@ export default {
       ],
       dogImg: '../../assets/yorkshire-mini.jpg'
     }
-  }
+  },
+  components:{ Map }
 }
 </script>
 

@@ -7,25 +7,13 @@
       <!-- //TODO arreglar recorte de la imagen -->
       <img class="first-screen-img" src="../../assets/FSI_1.png"> 
     </div>
-      <v-icon size="70" class="main-btn-center" >{{ alertIcon }}</v-icon>
-      <v-icon size="70" class="main-btn-left" >{{ pawIcon }}</v-icon>
-      <v-icon size="70" class="main-btn-right" >{{ homeIcon }}</v-icon>
+      <button class="main-btn-center"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
+      <button class="main-btn-left">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
+      <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
 
     <div class="missing-dogs-div" >
       <MissingDogs/>
     </div>
-
-    <div>
-      <Map
-        appId="DPVmzC3KXrz9Bk3wzpfR"
-        appCode="xpxcR1OHlqPK043UfzNHZQ"
-        lat="37.7397"
-        lng="-121.4252"
-        width="100%"
-        height="835px" 
-      />
-    </div>
-
   </section>
 </template>
 
@@ -40,7 +28,8 @@ export default {
     return {
       pawIcon: 'mdi-paw',
       alertIcon: 'mdi-alert',
-      homeIcon: 'mdi-home'
+      homeIcon: 'mdi-home',
+      hover: false
     }
   }
 }
@@ -52,6 +41,10 @@ export default {
   color: azure;
 }
 
+.active{
+  color: #678BEC;
+}
+
 .main-btn-left {
   margin-left: 18%
 }
@@ -61,6 +54,12 @@ export default {
   margin-left: 25%
 }
 
+.main-btn-center:hover,
+.main-btn-right:hover,
+.main-btn-left:hover{
+  background-color: #678BEC;
+}
+
 .first-screen-img {
   max-width: 100%;
   max-height: 25%;
@@ -68,7 +67,10 @@ export default {
 
 .div-main-btns {
   text-align: center;
-  
+}
+
+button{
+  border-radius: 50px;
 }
 
 </style>
