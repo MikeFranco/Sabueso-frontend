@@ -3,6 +3,7 @@
         <div class="opacidad">
         <v-app id="inspire">
     <v-form
+    class="form"
       ref="form"
       v-model="valid"
       lazy-validation
@@ -138,6 +139,15 @@ export default {
   padding: 0;
 }
 
+.form {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    margin: 10px;
+}
+#inspire {
+    background: 0;}
+    
 
 </style>
 
