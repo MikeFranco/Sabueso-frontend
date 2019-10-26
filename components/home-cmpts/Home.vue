@@ -16,7 +16,14 @@
     </div>
 
     <div>
-      
+      <Map
+        appId="DPVmzC3KXrz9Bk3wzpfR"
+        appCode="xpxcR1OHlqPK043UfzNHZQ"
+        lat="37.7397"
+        lng="-121.4252"
+        width="100%"
+        height="835px" 
+      />
     </div>
 
   </section>
@@ -25,9 +32,10 @@
 <script>
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
+import Map from '~/components/generic-cmpts/Map.vue';
 
 export default {
-  components: { NavBar, MissingDogs },
+  components: { NavBar, MissingDogs, Map },
   data(){
     return {
       pawIcon: 'mdi-paw',
