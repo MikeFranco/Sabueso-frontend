@@ -14,6 +14,11 @@
     <div class="missing-dogs-div" >
       <MissingDogs/>
     </div>
+
+    <div>
+      
+    </div>
+
   </section>
 </template>
 
