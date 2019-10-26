@@ -7,9 +7,9 @@
       <!-- //TODO arreglar recorte de la imagen -->
       <img class="first-screen-img" src="../../assets/FSI_1.png"> 
     </div>
-    <div class="div-main-btns" >
-      <v-icon>{{ icon }}</v-icon>
-    </div>
+      <v-icon size="70" class="main-btn-left" >{{ pawIcon }}</v-icon>
+      <v-icon size="70" class="main-btn-center" >{{ alertIcon }}</v-icon>
+      <v-icon size="70" class="main-btn-right" >{{ homeIcon }}</v-icon>
 
     <div class="missing-dogs-div" >
       <MissingDogs/>
@@ -21,14 +21,13 @@
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
 
-import { mdiAccount } from '@mdi/js';
-
 export default {
   components: { NavBar, MissingDogs },
   data(){
     return {
-      iconMd: 'mdiAccount',
-      icon: 'mdi-tennis',
+      pawIcon: 'mdi-paw',
+      alertIcon: 'mdi-alert',
+      homeIcon: 'mdi-home'
     }
   }
 }
@@ -40,8 +39,8 @@ export default {
   color: azure;
 }
 
-.main-btn {
-  font-size: 50px;
+.main-btn-left {
+  margin-left: 18%
 }
 
 .main-btn-center,
@@ -56,6 +55,7 @@ export default {
 
 .div-main-btns {
   text-align: center;
+  
 }
 
 </style>
