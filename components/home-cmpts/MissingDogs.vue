@@ -1,37 +1,44 @@
 <template>
   <section>
-    <div class="dog-car">
-      <div class="container">
-        <div class="row">
-          <div>
-            <img :src="dog.img" :alt="dog.name" class="dog-image" >
-            <div class="dog-name" > {{dog.name}} </div>
-          </div>
-        </div>
+    <div class="dog-card">
+      <div>
+        <img :src="dog.img" :alt="dog.name" class="dog-image" >
+        <div class="dog-name" > {{dog.name}} </div>
       </div>
+        <div class="here-map" >
+          <Map
+            appId="DPVmzC3KXrz9Bk3wzpfR"
+            appCode="xpxcR1OHlqPK043UfzNHZQ"
+            lat="19.311274"
+            lng="-99.176742"
+            width="100%"
+            height="200px"
+          />
+        </div>
     </div>
   </section>
 </template>
 
 <script>
+import Map from '../generic-cmpts/Map.vue';
 export default {
+  components: { Map },
   props:['dog']
 
 }
 </script>
 
-<style>
+<style scoped>
 .dog-card {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-  border-radius: 3px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 15px;
+  border-radius: 30px;
+  text-align: center;
 }
 
 .dog-image {
   margin: auto auto;
   max-height: 300px;
+  align-content: center;
 }
 
 .dog-name {
@@ -40,4 +47,5 @@ export default {
   color: azure;
   font-weight: bold;
 }
+
 </style>

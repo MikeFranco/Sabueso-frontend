@@ -33,7 +33,7 @@ export default {
     this.map = new H.Map(
       this.$refs.map,
       this.platform.createDefaultLayers().normal.map,{
-        zoom: 10,
+        zoom: 15,
         center: { lng: this.lng, lat: this.lat }
       }
     );

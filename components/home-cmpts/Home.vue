@@ -16,7 +16,7 @@
         <MissingDogs
           class="col-md-4 d-flex align-items-stretch "
           v-for="(dog, index) in hardcodedItems"
-          :key="index+1"
+          :key="index"
           :dog="dog"
         />
       </div>
@@ -27,10 +27,9 @@
 <script>
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
-import Map from '~/components/generic-cmpts/Map.vue';
 
 export default {
-  components: { NavBar, MissingDogs, Map },
+  components: { NavBar, MissingDogs },
   data(){
     return {
       pawIcon: 'mdi-paw',
