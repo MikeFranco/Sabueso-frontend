@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="btns" >
-      <button>Activar Alerta</button>
+      <button >Activar Alerta</button>
       <button>Adoptar</button>
       <button>Dar en Adopción</button>
       <button>Accesorios</button>
@@ -22,7 +22,7 @@ export default {
 .btns {
   text-align: right;
   padding: 1%;
-  font-size: 150%;
+  font-size: 200%;
 }
 
 button {

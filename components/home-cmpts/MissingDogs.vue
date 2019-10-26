@@ -2,16 +2,15 @@
   <section>
     <div class="dog-card">
       <div :style='`background-image: url(${dog.img})`' class="dog-image" >
-        <!-- <img :src="dog.img" :alt="dog.name" class="dog-image" > -->
-        <div class="dog-name" > {{dog.name}} </div>
       </div>
+        <div class="dog-name" > {{dog.name}} </div>
         <div class="here-map" >
           <Map
             appId="DPVmzC3KXrz9Bk3wzpfR"
             appCode="xpxcR1OHlqPK043UfzNHZQ"
             lat="19.311274"
             lng="-99.176742"
-            width="100%"
+            width="120%"
             height="200px"
           />
         </div>
@@ -49,6 +48,11 @@ export default {
   text-align: center;
   color: azure;
   font-weight: bold;
+  font-size: 25px;
+}
+
+.here-map {
+  min-width: 100%;
 }
 
 </style>

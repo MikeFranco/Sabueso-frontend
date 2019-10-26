@@ -1,14 +1,14 @@
 <template>
   <section>
-    <div class="nav-bar" >
+    <div class="nav-bar">
       <NavBar/> <!-- //TODO Hay que hacer este nav bar -->
     </div>
     <div>
-      <!-- //TODO arreglar recorte de la imagen -->
-      <img class="first-screen-img" src="../../assets/FSI_1.png"> 
+      <!-- //TODO arreglar esta imagen porque  -->
+      <img class="first-screen-img" src="../../assets/FSI_1.png">
     </div>
-      <button class="main-btn-center"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
-      <button class="main-btn-left">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
+      <button class="main-btn-left"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
+      <button class="main-btn-center">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
       <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
 
     <div class="missing-dogs-div" >
@@ -62,6 +62,7 @@ export default {
 .nav-bar {
   background-color:  #678BEC;
   color: azure;
+  max-width: 100%;
 }
 
 .active{
@@ -71,6 +72,9 @@ export default {
 .dog-card-container{
   background-color: #678BEC;
   padding: 30px;
+  max-height: 500px;
+  max-width: 100%;
+  overflow-y: auto;
 }
 .main-btn-left {
   margin-left: 18%
@@ -86,7 +90,9 @@ export default {
   font-size: 45px;
   color: azure;
   background-color: #678BEC;
-  margin-top: 15px;
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-bottom: 0.5%;
 }
 
 .main-btn-center:hover,
