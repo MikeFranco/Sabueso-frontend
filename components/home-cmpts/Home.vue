@@ -7,8 +7,8 @@
       <!-- //TODO arreglar recorte de la imagen -->
       <img class="first-screen-img" src="../../assets/FSI_1.png"> 
     </div>
-      <v-icon size="70" class="main-btn-left" >{{ pawIcon }}</v-icon>
       <v-icon size="70" class="main-btn-center" >{{ alertIcon }}</v-icon>
+      <v-icon size="70" class="main-btn-left" >{{ pawIcon }}</v-icon>
       <v-icon size="70" class="main-btn-right" >{{ homeIcon }}</v-icon>
 
     <div class="missing-dogs-div" >
