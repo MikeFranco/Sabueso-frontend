@@ -7,14 +7,22 @@
       <!-- //TODO arreglar recorte de la imagen -->
       <img class="first-screen-img" src="../../assets/FSI_1.png"> 
     </div>
-    <div class="div-main-btns" >
-      <fa class="main-btn main-btn-left" :icon="[ 'fal', 'external-link-alt' ]" />
-      <fa class="main-btn main-btn-center" :icon="[ 'fal', 'external-link-alt' ]" />
-      <fa class="main-btn main-btn-right" :icon="[ 'fal', 'external-link-alt' ]" />
-    </div>
+      <button class="main-btn-center"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
+      <button class="main-btn-left">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
+      <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
 
     <div class="missing-dogs-div" >
-      <MissingDogs/>
+      <div class="missing-dogs-title" >
+        <h1>Perros Extraviados</h1>
+      </div>
+      <div class="row  dog-card-container">
+        <MissingDogs
+          class="col-md-4 d-flex align-items-stretch "
+          v-for="(dog, index) in hardcodedItems"
+          :key="index"
+          :dog="dog"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -24,7 +32,29 @@ import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
 
 export default {
-  components: { NavBar, MissingDogs }
+  components: { NavBar, MissingDogs },
+  data(){
+    return {
+      pawIcon: 'mdi-paw',
+      alertIcon: 'mdi-alert',
+      homeIcon: 'mdi-home',
+      hover: false,
+      hardcodedItems:[
+        {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+        {name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},
+          {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+          {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+          {name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
+      ],
+    }
+  }
 }
 </script>
 
@@ -34,13 +64,34 @@ export default {
   color: azure;
 }
 
-.main-btn {
-  font-size: 50px;
+.active{
+  color: #678BEC;
+}
+
+.dog-card-container{
+  background-color: #678BEC;
+}
+.main-btn-left {
+  margin-left: 18%
 }
 
 .main-btn-center,
 .main-btn-right {
   margin-left: 25%
+}
+
+.missing-dogs-title {
+  text-align: center;
+  font-size: 45px;
+  color: azure;
+  background-color: #678BEC;
+  margin-top: 15px;
+}
+
+.main-btn-center:hover,
+.main-btn-right:hover,
+.main-btn-left:hover{
+  background-color: #678BEC;
 }
 
 .first-screen-img {
@@ -50,6 +101,10 @@ export default {
 
 .div-main-btns {
   text-align: center;
+}
+
+button{
+  border-radius: 50px;
 }
 
 </style>

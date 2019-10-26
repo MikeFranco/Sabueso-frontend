@@ -1,43 +1,52 @@
 <template>
   <section>
-    <div>
-    <h1>Perros Extraviados</h1>
-    <img :src="dogImg" alt="Esto murió">
-    <div v-for="(dog, index) in hardcodedItems" :key="index">
-      {{dog.name}}
-      {{dog.age}}
-      {{dog.size}}
-      <img :src="dog.img">
-      {{dog.description}}
-    </div>
+    <div class="dog-card">
+      <div>
+        <img :src="dog.img" :alt="dog.name" class="dog-image" >
+        <div class="dog-name" > {{dog.name}} </div>
+      </div>
+        <div class="here-map" >
+          <Map
+            appId="DPVmzC3KXrz9Bk3wzpfR"
+            appCode="xpxcR1OHlqPK043UfzNHZQ"
+            lat="19.311274"
+            lng="-99.176742"
+            width="100%"
+            height="200px"
+          />
+        </div>
     </div>
   </section>
 </template>
+
 <script>
+import Map from '../generic-cmpts/Map.vue';
 export default {
-  data(){
-    return {
-      hardcodedItems:[
-        {name: 'Koda', age: 5, size: 'inmensurable',
-          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
-        {name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
-      ],
-      dogImg: '../../assets/yorkshire-mini.jpg'
-    }
-  }
+  components: { Map },
+  props:['dog']
+
 }
 </script>
 
 <style scoped>
-h1 {
+
+.dog-card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  border-radius: 30px;
   text-align: center;
-  margin-top: 2%;
-  font-size: 50px;
-  color: azure;
 }
 
-div {
-  background-color: #678BEC;
+.dog-image {
+  margin: auto auto;
+  max-height: 300px;
+  align-content: center;
 }
+
+.dog-name {
+  background-color: #B21779;
+  text-align: center;
+  color: azure;
+  font-weight: bold;
+}
+
 </style>
