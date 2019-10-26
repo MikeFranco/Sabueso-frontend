@@ -1,7 +1,12 @@
 <template>
   <section>
     <div class="btns" >
-      <v-btn>Activar Alerta</v-btn>
+      <button>Activar Alerta</button>
+      <button>Adoptar</button>
+      <button>Dar en Adopción</button>
+      <button>Accesorios</button>
+      <!-- //TODO Arreglar el background del botón-->
+      <button class="login-btn" >Iniciar Sesión</button>
     </div>
   </section>
 </template>
@@ -13,8 +18,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .btns {
   text-align: right;
+  padding: 1%;
+  font-size: 150%;
+}
+
+button {
+  padding: 1%;
+}
+
+.login-btn {
+  background-color: #B21779;
 }
 </style>
