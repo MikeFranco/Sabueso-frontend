@@ -2,17 +2,18 @@
   <section>
     <div>
     <h1>Perros Extraviados</h1>
-    <img :src="dogImg" alt="Esto murió">
+    <!-- <img :src="dogImg" alt="Esto murió"> -->
     <div v-for="(dog, index) in hardcodedItems" :key="index">
       {{dog.name}}
       {{dog.age}}
       {{dog.size}}
-      <img :src="dog.img">
+      <!-- <img :src="dog.img"> -->
       {{dog.description}}
     </div>
     </div>
   </section>
 </template>
+
 <script>
 export default {
   data(){
