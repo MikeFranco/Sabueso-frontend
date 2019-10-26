@@ -12,14 +12,19 @@
       <fa class="main-btn main-btn-center" :icon="[ 'fal', 'external-link-alt' ]" />
       <fa class="main-btn main-btn-right" :icon="[ 'fal', 'external-link-alt' ]" />
     </div>
+
+    <div class="missing-dogs-div" >
+      <MissingDogs/>
+    </div>
   </section>
 </template>
 
 <script>
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
+import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
 
 export default {
-  components: { NavBar }
+  components: { NavBar, MissingDogs }
 }
 </script>
 
@@ -45,7 +50,6 @@ export default {
 
 .div-main-btns {
   text-align: center;
-  margin-bottom: 25%;
 }
 
 </style>
