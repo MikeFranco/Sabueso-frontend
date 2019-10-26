@@ -70,6 +70,7 @@ export default {
 
 .dog-card-container{
   background-color: #678BEC;
+  padding: 30px;
 }
 .main-btn-left {
   margin-left: 18%

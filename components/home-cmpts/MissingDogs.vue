@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="dog-card">
-      <div>
-        <img :src="dog.img" :alt="dog.name" class="dog-image" >
+      <div :style='`background-image: url(${dog.img})`' class="dog-image" >
+        <!-- <img :src="dog.img" :alt="dog.name" class="dog-image" > -->
         <div class="dog-name" > {{dog.name}} </div>
       </div>
         <div class="here-map" >
@@ -33,13 +33,15 @@ export default {
 .dog-card {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
   border-radius: 30px;
+  overflow: hidden;
   text-align: center;
 }
 
 .dog-image {
   margin: auto auto;
-  max-height: 300px;
-  align-content: center;
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 
 .dog-name {
