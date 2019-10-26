@@ -11,7 +11,15 @@
         v-model="name"
         :counter="10"
         :rules="nameRules"
-        label="Name"
+        label="Nombre"
+        required
+      ></v-text-field>
+
+      <v-text-field
+        v-model="lastname"
+        :counter="10"
+        :rules="lastnameRules"
+        label="Apellido"
         required
       ></v-text-field>
   
@@ -48,33 +56,20 @@
       <v-checkbox
         v-model="checkbox"
         :rules="[v => !!v || 'You must agree to continue!']"
-        label="Do you agree?"
+        label="¿Aceptas terminos y condiciones de nuestro aviso de privacidad?"
         required
       ></v-checkbox>
+
+      
   
       <v-btn
-        :disabled="!valid"
-        color="success"
-        class="mr-4"
-        @click="validate"
-      >
-        Validate
-      </v-btn>
-  
-      <v-btn
-        color="error"
+        color="#B21779"
         class="mr-4"
         @click="reset"
       >
         Reset Form
       </v-btn>
   
-      <v-btn
-        color="warning"
-        @click="resetValidation"
-      >
-        Reset Validation
-      </v-btn>
     </v-form>
   </v-app>
         </div>
@@ -142,6 +137,7 @@ export default {
   margin: 0;
   padding: 0;
 }
+
 
 </style>
 
