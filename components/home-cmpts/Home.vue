@@ -12,7 +12,14 @@
       <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
 
     <div class="missing-dogs-div" >
-      <MissingDogs/>
+       <div class="row  dog-card-container" style="margin-top:30px; border-top:1px solid #d9d9d9;">
+        <MissingDogs
+          class="col-md-4 d-flex align-items-stretch "
+          v-for="(dog, index) in hardcodedItems"
+          :key="index+1"
+          :dog="dog"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -29,7 +36,21 @@ export default {
       pawIcon: 'mdi-paw',
       alertIcon: 'mdi-alert',
       homeIcon: 'mdi-home',
-      hover: false
+      hover: false,
+      hardcodedItems:[
+        {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+        {name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},
+          {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+          {name: 'Koda', age: 5, size: 'inmensurable',
+          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
+          {name: 'Chip', age: 5, size: 'microchip',
+          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
+      ],
     }
   }
 }
@@ -45,6 +66,9 @@ export default {
   color: #678BEC;
 }
 
+.dog-card-container{
+  background-color: #678BEC;
+}
 .main-btn-left {
   margin-left: 18%
 }

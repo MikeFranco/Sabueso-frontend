@@ -1,25 +1,11 @@
 <template>
   <section>
-    <div>
-      <h1>Perros Extraviados</h1>
-      <div class="row" >
-        <div class="col-md-9" > <!-- //TODO Terminar este css para que sean un renglón los n perros  -->
-          <div class="dog-card" v-for="(dog, index) in hardcodedItems" :key="index">
-            <img class="dog-img" :src="dog.img">
+    <div class="dog-car">
+      <div class="container">
+        <div class="row">
+          <div>
+            <img :src="dog.img" :alt="dog.name" class="dog-image" >
             <div class="dog-name" > {{dog.name}} </div>
-            <div class="dog-extra-data">
-              {{dog.age}}
-              {{dog.size}}
-              {{dog.description}}
-              <!-- <Map
-                appId="DPVmzC3KXrz9Bk3wzpfR"
-                appCode="xpxcR1OHlqPK043UfzNHZQ"
-                lat="37.7397"
-                lng="-121.4252"
-                width="10%"
-                height="83px" 
-              /> -->
-            </div>
           </div>
         </div>
       </div>
@@ -28,39 +14,24 @@
 </template>
 
 <script>
-import Map from '../generic-cmpts/Map.vue';
 export default {
-  data(){
-    return {
-      hardcodedItems:[
-        {name: 'Koda', age: 5, size: 'inmensurable',
-          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
-        {name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
-      ],
-      dogImg: '../../assets/yorkshire-mini.jpg'
-    }
-  },
-  components:{ Map }
+  props:['dog']
+
 }
 </script>
 
-<style scoped>
-h1 {
-  text-align: center;
-  margin-top: 2%;
-  font-size: 50px;
-  color: azure;
+<style>
+.dog-card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 15px;
 }
 
-div {
-  background-color: #678BEC;
-}
-
-.dog-img {
-  max-width: 200px;
-  max-height: 210px;
-  vertical-align: center;
+.dog-image {
+  margin: auto auto;
+  max-height: 300px;
 }
 
 .dog-name {
@@ -68,14 +39,5 @@ div {
   text-align: center;
   color: azure;
   font-weight: bold;
-}
-
-.dog-card {
-  max-width: 15%;
-  background-color: red;
-}
-
-.dog-extra-data {
-  background-color: azure;
 }
 </style>
