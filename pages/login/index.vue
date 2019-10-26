@@ -1,9 +1,7 @@
 <template>
-    <section> 
-        <div class="container">
-      <div class="opacidad"></div>
-    </div>
-    
+    <section class="container"> 
+        <div class="opacidad">
+        </div>
     </section>
     
 </template> 
@@ -21,18 +19,21 @@ export default {
 <style scoped>
 
 .container {
-  width: 100%;
+  min-width: 100%;
   height: 100vh;
   background-image: url("../../assets/login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  padding: 0;
 }
 
 .opacidad {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 </style>
