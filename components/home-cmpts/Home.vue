@@ -87,7 +87,7 @@ export default {
 
 .missing-dogs-title {
   text-align: center;
-  font-size: 45px;
+  font-size: 38px;
   color: azure;
   background-color: #678BEC;
   margin-top: 2%;
