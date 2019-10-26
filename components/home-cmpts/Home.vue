@@ -12,7 +12,10 @@
       <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
 
     <div class="missing-dogs-div" >
-       <div class="row  dog-card-container" style="margin-top:30px; border-top:1px solid #d9d9d9;">
+      <div class="missing-dogs-title" >
+        <h1>Perros Extraviados</h1>
+      </div>
+      <div class="row  dog-card-container">
         <MissingDogs
           class="col-md-4 d-flex align-items-stretch "
           v-for="(dog, index) in hardcodedItems"
@@ -75,6 +78,14 @@ export default {
 .main-btn-center,
 .main-btn-right {
   margin-left: 25%
+}
+
+.missing-dogs-title {
+  text-align: center;
+  font-size: 45px;
+  color: azure;
+  background-color: #678BEC;
+  margin-top: 15px;
 }
 
 .main-btn-center:hover,
