@@ -43,28 +43,6 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    ['nuxt-fontawesome', {
-      component: 'fa',
-      imports: [{
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['fas']
-        },
-        {
-          set: '@fortawesome/pro-regular-svg-icons',
-          icons: ['far']
-        },
-        {
-          set: '@fortawesome/pro-light-svg-icons',
-          icons: ['fal']
-        },
-        {
-          set: '@fortawesome/free-brands-svg-icons',
-          icons: ['fab']
-        }
-      ]
-    }
-
-  ],
   ],
   /*
   ** Axios module configuration
