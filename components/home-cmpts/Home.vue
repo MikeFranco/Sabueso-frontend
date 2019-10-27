@@ -17,7 +17,7 @@
       <div class="dog-card-container">
         <div class="inner-card-container">
           <MissingDogs
-            class="dog-card-swiper"
+            class="dog-card-swiper col-md-6"
             v-for="(dog, index) in hardcodedItems"
             :key="index"
             :dog="dog"
@@ -28,7 +28,7 @@
 
     <h1 class="adopt-title" >¡ADOPTA A UN COMPAÑERO!</h1>
     <div class="adopt">
-      <DogInfo
+      <DogInfoHome
         class="col-md-4 d-flex align-items-stretch "
         v-for="(dog, index) in hardcodedItems"
         :key="index"
@@ -42,10 +42,10 @@
 <script>
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
-import DogInfo from '~/components/generic-cmpts/DogInfo.vue';
+import DogInfoHome from '~/components/generic-cmpts/DogInfoHome.vue';
 
 export default {
-  components: { NavBar, MissingDogs, DogInfo },
+  components: { NavBar, MissingDogs, DogInfoHome },
   props:['missingPets'],
   data(){
     return {
@@ -82,7 +82,7 @@ export default {
 .dog-card-container{
   background-color: #678BEC;
   padding: 30px;
-  max-height: 425px;
+  max-height: 450px;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
@@ -112,7 +112,9 @@ export default {
   position: relative;
   min-height: 500px;
   max-width: 50%;
-  padding-right: 2%
+  padding-right: 2%;
+  margin: center;
+  margin-left: 50px;
 }
 
 .main-btn-center,
@@ -121,9 +123,10 @@ export default {
 }
 
 .dog-card-swiper {
-  max-width: 100%;
-  max-height: 350px;
-  padding-right: 5%
+  max-width: 120%;
+  max-height: 100%;
+  padding-right: 5%;
+
 }
 
 .missing-dogs-title {
