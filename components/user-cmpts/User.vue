@@ -1,6 +1,8 @@
 <template>
   <section>
-    <NavBar />
+    <div class="nav-bar">
+      <NavBar/>
+    </div>
     <section class="user-container" >
       <div class="user-info">
         <img class="user-img" :src="user.img" :alt="user.name">
@@ -10,13 +12,27 @@
         </div>
       </div>
       <div class="global-dog-container" >
-        <div class="row dog-card-container">
+        <!-- <div class="row dog-card-container" v-if="user.pets.length > 0">
             <DogInfo
               class="col-md-8 align-items-stretch "
               v-for="(dog, index) in user.pets"
               :key="index"
               :dog="dog"
             />
+        </div> -->
+        <!-- <div v-else-if="entryNewPet" class="dog-form">
+          <DogForm/>
+        </div> -->
+        <div>
+          <div class="entry-new-pet-button" >
+            <h3>¡REGISTRA OTRA MASCOTA!</h3>
+          </div>
+          <div class="entry-new-pet-button" >
+            <h3>¡REGISTRA OTRA MASCOTA!</h3>
+          </div>
+          <div class="entry-new-pet-button" >
+            <h3>¡REGISTRA OTRA MASCOTA!</h3>
+          </div>
         </div>
       </div>
     </section>
@@ -26,12 +42,14 @@
 <script>
 import NavBar from '../generic-cmpts/NavBar.vue';
 import DogInfo from '../generic-cmpts/DogInfo.vue';
+import DogForm from './DogForm';
 
 export default {
-  components: { NavBar, DogInfo },
+  components: { NavBar, DogInfo, DogForm },
   //props:['user'],
   data() {
     return {
+      entryNewPet: false,
       user:{
         name: 'Mariana',
         lastName: 'Ruiz de Chávez Tamayo',
@@ -58,8 +76,28 @@ export default {
 </script>
 
 <style scoped>
+.entry-new-pet-button {
+  background-color: #B21779;
+  border-radius: 30px;
+  font-size: 30px;
+  padding: 40px;
+  margin: 10px;
+  color: white;
+}
+
 .user-img {
   border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+}
+
+.dog-form{
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .user-name{
@@ -76,6 +114,7 @@ export default {
 
 .user-container {
   display: flex;
+  padding-top: 5%
 }
 
 .user-full-name {
@@ -106,6 +145,7 @@ export default {
   max-height: 500px;
   width: 80%;
   overflow-y: auto;
+  align-items: center;
 }
 .main-btn-left {
   margin-left: 18%

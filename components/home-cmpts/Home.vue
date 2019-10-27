@@ -1,10 +1,9 @@
 <template>
   <section>
     <div class="nav-bar">
-      <NavBar/> <!-- //TODO Hay que hacer este nav bar -->
+      <NavBar/>
     </div>
     <div>
-      <!-- //TODO arreglar esta imagen porque  -->
       <img class="first-screen-img" src="../../assets/FSI_1.png">
     </div>
       <button class="main-btn-left"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
