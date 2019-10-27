@@ -10,7 +10,6 @@
     >
       <v-text-field
         v-model="name"
-        :counter="10"
         :rules="nameRules"
         label="Nombre"
         required
@@ -18,7 +17,6 @@
 
       <v-text-field
         v-model="lastname"
-        :counter="10"
         :rules="lastnameRules"
         label="Apellido"
         required
@@ -37,14 +35,7 @@
         label="Celular"
         required
       ></v-text-field>
-      
-      <v-text-field
-        v-model="email"
-        :rules="emailRules"
-        label="E-mail"
-        required
-      ></v-text-field>
-
+    
   
       <v-select
         v-model="select"
@@ -140,14 +131,16 @@ export default {
 }
 
 .form {
-    width: 500px;
-    height: 500px;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-top: 3%;
     margin: 10px;
 }
 #inspire {
     background: 0;}
-    
+
 
 </style>
 
