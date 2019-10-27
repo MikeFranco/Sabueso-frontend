@@ -53,18 +53,14 @@ export default {
       homeIcon: 'mdi-home',
       hover: false,
       hardcodedItems:[
-        {name: 'Koda', age: 5, size: 'inmensurable',
-          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
-        {name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},
-          {name: 'Koda', age: 5, size: 'inmensurable',
-          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
-          {name: 'Koda', age: 5, size: 'inmensurable',
-          description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
-          {name: 'Chip', age: 5, size: 'microchip',
-          description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
+          {name: 'Koda', age: 5, size: 'Grande',
+          description: 'Pastor Belga Malinois, cafe con pecho negro', img:require('../../assets/Koda.jpg')},
+          {name: 'Manchas', age: 1, size: 'Pequeño',
+          description: 'Boston terrier', img:require('../../assets/perrito1.jpg')},
+          {name: 'Link', age: 3, size: 'Pequeño',
+          description: 'Maltipo blanco', img:require('../../assets/perrito2.jpg')},
+          {name: 'Negro', age: 7, size: 'Grande',
+          description: 'Whippet, cafe con pecho blanco', img:require('../../assets/perrito3.jpg')}
       ],
     }
   }
