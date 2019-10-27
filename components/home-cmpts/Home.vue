@@ -26,15 +26,25 @@
         </div>
       </div>
     </div>
+
+    <div class="adopt">
+      <DogInfo
+        class="col-md-4 d-flex align-items-stretch "
+        v-for="(dog, index) in hardcodedItems"
+        :key="index"
+        :dog="dog"
+      />
+    </div>
   </section>
 </template>
 
 <script>
 import NavBar from '~/components/generic-cmpts/NavBar.vue';
 import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
+import DogInfo from '~/components/generic-cmpts/DogInfo.vue';
 
 export default {
-  components: { NavBar, MissingDogs },
+  components: { NavBar, MissingDogs, DogInfo },
   data(){
     return {
       pawIcon: 'mdi-paw',
@@ -55,11 +65,6 @@ export default {
           {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
       ],
-    }
-  },
-  methods: {
-    getMissingCardDog(){
-      
     }
   }
 }
@@ -82,6 +87,15 @@ export default {
   max-height: 500px;
   width: 100%;
   overflow: hidden;
+}
+
+.adopt {
+  display: flex;
+}
+
+.adopt-card {
+  flex: 1;
+  width: 50%
 }
 
 .missing-dogs-div {
@@ -139,6 +153,10 @@ export default {
 
 button{
   border-radius: 50px;
+}
+
+.adopt {
+  background-color: azure;
 }
 
 </style>
