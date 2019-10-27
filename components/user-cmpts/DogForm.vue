@@ -56,7 +56,7 @@ export default {
     },
     createNewPet(){
       const body = this.createPet;
-      this.$axios.post('https://localhost:3000/user', body)
+      this.$axios.post('/back/user', body)
         .then(() => this.$noty.success('Usuario creado correctamente'))
         .catch(err => {
           console.error(err);

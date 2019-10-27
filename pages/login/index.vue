@@ -5,11 +5,11 @@
         <v-form class="form" ref="form" v-model="valid" lazy-validation>
           <v-text-field v-model="createUser.name" :rules="nameRules" label="Nombre" required></v-text-field>
 
-          <v-text-field v-model="createUser.lastname" :rules="lastnameRules" label="Apellido" required></v-text-field>
+          <v-text-field v-model="createUser.lastName" :rules="lastnameRules" label="Apellido" required></v-text-field>
 
           <v-text-field v-model="createUser.email" :rules="emailRules" label="E-mail" required></v-text-field>
 
-          <v-text-field v-model="createUser.mobile" :rules="mobileRules" label="Celular" required></v-text-field>
+          <v-text-field v-model="createUser.phoneNumber" :rules="phoneNumberRules" label="Celular" required></v-text-field>
 
           <v-text-field type="password" v-model="createUser.password" :rules="passwordRules" label="Contraseña" required></v-text-field>
 
@@ -37,10 +37,11 @@ export default {
       valid: true,
       createUser:{
         name: "",
-        lastname:'',
+        lastName:'',
         email: "",
-        mobile:'',
+        phoneNumber:'',
         password:'',
+        age:25
       },
       select: null,
       checkbox: false,
@@ -54,7 +55,7 @@ export default {
         v => !!v || "E-mail is required",
         v => /.+@.+\..+/.test(v) || "E-mail must be valid"
       ],
-      mobileRules:[
+      phoneNumberRules:[
         v => !!v || "Mobile is required",
       ],
       passwordRules:[
@@ -78,7 +79,7 @@ export default {
     createNewUser(){
 
       const body = this.createUser;
-      this.$axios.post('https://localhost:3000/user', body)
+      this.$axios.post('https://backendmxhacks.herokuapp.com/user', body)
         .then(() => this.$noty.success('Usuario creado correctamente'))
         .catch(err => {
           console.error(err);
