@@ -4,7 +4,9 @@
       <div :style='`background-image: url(${dog.img})`' class="dog-image" >
       </div>
       <div class="dog-text" >
-        {{dog.description}}
+        <h4>Nombre: </h4> <span>{{dog.name}}</span>
+        <h4>Edad: </h4> <span>{{ dog.age }} años</span>
+        <h4>Descripción: </h4> <span>{{dog.description}}</span>
       </div>
     </div>
   </section>
@@ -38,8 +40,14 @@ export default {
   align-items: left;
 }
 
+h4 {
+  padding: 12px;
+}
+
 .dog-text {
   flex:1;
+  background-color: #678BEC;
+  color: azure;
 }
 
 .dog-name {

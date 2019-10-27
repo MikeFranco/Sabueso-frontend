@@ -13,7 +13,7 @@
 
     <div class="missing-dogs-div" >
       <div class="missing-dogs-title" >
-        <h1>Perros Extraviados</h1>
+        <h1>PERROS EXTRAVIADOS</h1>
       </div>
       <div class="dog-card-container">
         <div class="inner-card-container">
@@ -27,6 +27,7 @@
       </div>
     </div>
 
+    <h1 class="adopt-title" >¡ADOPTA A UN COMPAÑERO!</h1>
     <div class="adopt">
       <DogInfo
         class="col-md-4 d-flex align-items-stretch "
@@ -91,6 +92,7 @@ export default {
 
 .adopt {
   display: flex;
+  background-color: azure;
 }
 
 .adopt-card {
@@ -121,8 +123,8 @@ export default {
 }
 
 .dog-card-swiper {
-  min-width: 100%;
-  min-height: 350px;
+  max-width: 100%;
+  max-height: 350px;
   padding-right: 5%
 }
 
@@ -157,6 +159,19 @@ button{
 
 .adopt {
   background-color: azure;
+}
+
+.adopt-title {
+  color: #B21779;
+  background-color: azure;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: 57px;
+  margin-top: 2%;
+  padding-top: 1%;
+  padding-bottom: 0.7%;
 }
 
 </style>

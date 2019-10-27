@@ -5,6 +5,14 @@
       </div>
         <div class="dog-name" > {{dog.name}} </div>
         <div class="here-map" >
+          <div class="col-1">
+            <div style="display: flex;" > <h3>Edad:&nbsp;</h3> <p style="padding-top:3px;" >{{ dog.age }}</p> </div>
+            <div style="display: flex;" > <h3 style="padding-top: 5px;" >Talla:&nbsp;</h3> <p style="padding-top:7px;" >{{ dog.size }}</p> </div>
+          </div>
+          <div class="col-2">
+            <h3>Descripción: </h3><p> {{dog.description}} </p>
+
+          </div>
           <!-- <Map
             appId="DPVmzC3KXrz9Bk3wzpfR"
             appCode="xpxcR1OHlqPK043UfzNHZQ"
@@ -13,7 +21,6 @@
             width="120%"
             height="200px"
           /> -->
-          {{dog.description}}
         </div>
     </div>
   </section>
@@ -54,6 +61,22 @@ export default {
 
 .here-map {
   min-width: 100%;
+  display: flex;
+  background-color: azure;
+}
+
+.col-1 {
+  text-align: left;
+  width: 50%;
+  font-size: 18px;
+  padding: 3%
+}
+
+.col-2 {
+  right: 5px;
+  width: 50%;
+  text-align: right;
+  padding-left: 50%;
 }
 
 </style>

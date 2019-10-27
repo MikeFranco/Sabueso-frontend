@@ -111,11 +111,11 @@ export default {
   padding-bottom: 0.7%;
 }
 
-.main-btn-center:hover,
+/* .main-btn-center:hover,
 .main-btn-right:hover,
 .main-btn-left:hover{
   background-color: #678BEC;
-}
+} */
 
 .first-screen-img {
   max-width: 100%;
