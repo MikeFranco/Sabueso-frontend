@@ -8,6 +8,16 @@
         <h4>Edad: </h4> <span>{{ dog.age }} años</span>
         <h4>Descripción: </h4> <span>{{dog.description}}</span>
       </div>
+      <div class="here-map">
+        <Map
+            appId="DPVmzC3KXrz9Bk3wzpfR"
+            appCode="xpxcR1OHlqPK043UfzNHZQ"
+            lat="19.311274"
+            lng="-99.176742"
+            width="120%"
+            height="200px"
+          />
+      </div>
     </div>
   </section>
 </template>
@@ -29,6 +39,7 @@ export default {
   overflow: hidden;
   text-align: center;
   display: flex;
+  width: 800px;
 }
 
 .dog-image {
@@ -48,6 +59,7 @@ h4 {
   flex:1;
   background-color: #678BEC;
   color: white;
+  min-width: 280px;
 }
 
 .dog-name {

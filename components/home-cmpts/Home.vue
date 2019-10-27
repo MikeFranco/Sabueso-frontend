@@ -6,9 +6,9 @@
     <div>
       <img class="first-screen-img" src="../../assets/FSI_1.png">
     </div>
-      <button class="main-btn-left"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
-      <button class="main-btn-center">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
-      <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
+      <img class="main-btn-left" src="../../assets/Alerta.png" alt="activar alerta">
+      <img class="main-btn-center" src="../../assets/Paw.png" alt="adopción">
+      <img class="main-btn-right" src="../../assets/Casa.png" alt="dar en adopción">
 
     <div class="missing-dogs-div" >
       <div class="missing-dogs-title" >
@@ -120,7 +120,7 @@ export default {
 
 .main-btn-center,
 .main-btn-right {
-  margin-left: 25%
+  margin-left: 10%
 }
 
 .dog-card-swiper {

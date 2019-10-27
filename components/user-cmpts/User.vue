@@ -50,7 +50,7 @@ export default {
         name: 'Mariana',
         lastName: 'Ruiz de Chávez Tamayo',
         img: require('../../assets/yorkshire-mini.jpg'),
-        /* pets:[{name: 'Koda', age: 5, size: 'inmensurable',
+        pets:[{name: 'Koda', age: 5, size: 'inmensurable',
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
         {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
@@ -62,7 +62,7 @@ export default {
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
           {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
-        ] */
+        ]
       }
     }
   },

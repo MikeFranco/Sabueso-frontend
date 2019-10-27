@@ -11,16 +11,7 @@
           </div>
           <div class="col-2">
             <h3>Descripción: </h3><p> {{dog.description}} </p>
-
           </div>
-          <!-- <Map
-            appId="DPVmzC3KXrz9Bk3wzpfR"
-            appCode="xpxcR1OHlqPK043UfzNHZQ"
-            lat="19.311274"
-            lng="-99.176742"
-            width="120%"
-            height="200px"
-          /> -->
         </div>
     </div>
   </section>
