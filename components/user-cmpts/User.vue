@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="nav-bar">
-      <NavBar/>
+      <UserNavBar/>
     </div>
     <section class="user-container" >
       <div class="user-info">
@@ -36,13 +36,13 @@
 </template>
 
 <script>
-import NavBar from '../generic-cmpts/NavBar.vue';
+import UserNavBar from '../generic-cmpts/UserNavBar.vue';
 import DogInfo from '../generic-cmpts/DogInfo.vue';
 import DogForm from './DogForm';
 import EntryNewPet from '../generic-cmpts/EntryNewPet.vue'
 
 export default {
-  components: { NavBar, DogInfo, DogForm, EntryNewPet },
+  components: { UserNavBar, DogInfo, DogForm, EntryNewPet },
   //props:['user'],
   data() {
     return {
@@ -50,7 +50,7 @@ export default {
       user:{
         name: 'Mariana',
         lastName: 'Ruiz de Chávez Tamayo',
-        img: require('../../assets/yorkshire-mini.jpg'),
+        img: require('../../assets/Mariana.jpeg'),
         pets:[
           {name: 'Koda', age: 5, size: 'Grande',
           description: 'Pastor Belga Malinois, cafe con pecho negro', img:require('../../assets/Koda.jpg')},
