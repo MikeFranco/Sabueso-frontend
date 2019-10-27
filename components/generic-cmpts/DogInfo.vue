@@ -12,8 +12,8 @@
         <Map
             appId="DPVmzC3KXrz9Bk3wzpfR"
             appCode="xpxcR1OHlqPK043UfzNHZQ"
-            lat="19.311274"
-            lng="-99.176742"
+            :lat="`1${changeLg}.311274`"
+            lng='-99.176742'
             width="120%"
             height="200px"
           />
@@ -26,7 +26,7 @@
 import Map from '../generic-cmpts/Map.vue';
 export default {
   components: { Map },
-  props:['dog']
+  props:['dog', 'changeLg']
 
 }
 </script>

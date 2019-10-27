@@ -17,6 +17,7 @@
               class="col-md-8 align-items-stretch "
               v-for="(dog, index) in user.pets"
               :key="index"
+              :changeLg="index"
               :dog="dog"
             />
             <entry-new-pet :showDogsForm="showDogsForm" />
