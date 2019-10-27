@@ -1,19 +1,22 @@
 <template>
   <section>
     <div class="btns" >
-      <button >Activar Alerta</button>
+      <button>Activar Alerta</button>
       <button>Adoptar</button>
       <button>Dar en Adopción</button>
       <button>Accesorios</button>
-      <!-- //TODO Arreglar el background del botón-->
-      <button class="login-btn" >Iniciar Sesión</button>
+      <button class="login-btn" @click="goToLink('/login')">Iniciar Sesión</button>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
+  methods:{
+    goToLink(route){
+      this.$router.push(route);
+    }
+  }
 
 }
 </script>

@@ -50,6 +50,21 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    debug: false,
+    proxy: true,
+    // baseUrl: '/'
+  },
+
+  proxy:{
+    "/back": {
+      target:"https://backendmxhacks.herokuapp.com",
+      pathRewrite: {
+        '^/back': ''
+      },
+      changeOrigin: false,
+      prependPath: false
+    }
   },
   /*
   ** vuetify module configuration

@@ -45,6 +45,7 @@ import DogInfo from '~/components/generic-cmpts/DogInfo.vue';
 
 export default {
   components: { NavBar, MissingDogs, DogInfo },
+  props:['missingPets'],
   data(){
     return {
       pawIcon: 'mdi-paw',
