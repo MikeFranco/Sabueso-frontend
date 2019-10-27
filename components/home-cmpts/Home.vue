@@ -33,6 +33,7 @@
         v-for="(dog, index) in hardcodedItems"
         :key="index"
         :dog="dog"
+        :showMap="false"
       />
     </div>
   </section>
