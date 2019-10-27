@@ -11,6 +11,8 @@
 
           <v-btn color="#B21779" class="mr-4" @click="reset">Reset Form</v-btn>
           <v-btn color="#678BEC" class="mr-4" @click="createNewPet">Crear Usuario</v-btn>
+          <v-btn color="white" class="mr-4 exit-btn " @click="showDogsForm"> <font color="black"> Salir </font></v-btn>
+
         </v-form>
       </v-app>
     </div>
@@ -19,6 +21,7 @@
 
 <script>
 export default {
+  props:['showDogsForm'],
   data() {
     return {
       bckImg: require("../../assets/ImagenRegistrarse-05.png"),
@@ -59,6 +62,9 @@ export default {
           console.error(err);
           this.$noty.error('Se ha producido un error, inténtalo más tarde')
         })
+    },
+    exitDogsForm(){
+
     }
   },
 };
@@ -75,6 +81,9 @@ export default {
   padding: 0;
 }
 
+.exit-btn{
+  color: white;
+}
 .opacidad {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;

@@ -22,7 +22,7 @@
             <entry-new-pet :showDogsForm="showDogsForm" />
         </div>
         <div v-else-if="entryNewPet" class="dog-form">
-          <DogForm/>
+          <DogForm :showDogsForm="showDogsForm"/>
         </div>
         <div v-else>
           <entry-new-pet :showDogsForm="showDogsForm" />
