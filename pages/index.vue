@@ -16,7 +16,7 @@ export default {
     }
   },
   created(){
-    this.$axios.get("/back/pets")
+    this.$axios.get('/back/pets')
       .then(response => this.missingPets = response)
       .catch(err => console.error(err));
   }

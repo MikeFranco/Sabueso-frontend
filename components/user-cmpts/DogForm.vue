@@ -3,13 +3,14 @@
     <div class="opacidad">
       <v-app id="inspire">
         <v-form class="form" ref="form" v-model="valid" lazy-validation>
-          <v-text-field v-model="name" :rules="nameRules" label="Nombre" required></v-text-field>
+          <v-text-field v-model="createPet.name" :rules="nameRules" label="Nombre" required></v-text-field>
 
-          <v-text-field v-model="age" :rules="ageRules" label="Edad" required></v-text-field>
+          <v-text-field v-model="createPet.age" :rules="ageRules" label="Edad" required></v-text-field>
 
-          <v-text-field v-model="description" :rules="descriptionRules" label="Descripción de tu compañero" required></v-text-field>
+          <v-text-field v-model="createPet.description" :rules="descriptionRules" label="Descripción de tu compañero" required></v-text-field>
 
           <v-btn color="#B21779" class="mr-4" @click="reset">Reset Form</v-btn>
+          <v-btn color="#678BEC" class="mr-4" @click="createNewPet">Crear Usuario</v-btn>
         </v-form>
       </v-app>
     </div>
@@ -22,11 +23,11 @@ export default {
     return {
       bckImg: require("../../assets/ImagenRegistrarse-05.png"),
       valid: true,
-      name: "",
-      age: '',
-      description: '',
-      select: null,
-      checkbox: false,
+      createPet:{
+        name: "",
+        age: '',
+        description: ''
+      },
       nameRules: [
         v => !!v || "Name is required",
       ],
@@ -49,8 +50,17 @@ export default {
     },
     resetValidation() {
       this.$refs.form.resetValidation();
+    },
+    createNewPet(){
+      const body = this.createPet;
+      this.$axios.post('https://localhost:3000/user', body)
+        .then(() => this.$noty.success('Usuario creado correctamente'))
+        .catch(err => {
+          console.error(err);
+          this.$noty.error('Se ha producido un error, inténtalo más tarde')
+        })
     }
-  }
+  },
 };
 </script>
 

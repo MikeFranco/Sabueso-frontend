@@ -12,27 +12,22 @@
         </div>
       </div>
       <div class="global-dog-container" >
-        <!-- <div class="row dog-card-container" v-if="user.pets.length > 0">
+        <div class="row dog-card-container" v-if="user.pets && user.pets.length > 0">
             <DogInfo
               class="col-md-8 align-items-stretch "
               v-for="(dog, index) in user.pets"
               :key="index"
               :dog="dog"
             />
-        </div> -->
-        <!-- <div v-else-if="entryNewPet" class="dog-form">
+            <entry-new-pet :showDogsForm="showDogsForm" />
+        </div>
+        <div v-else-if="entryNewPet" class="dog-form">
           <DogForm/>
-        </div> -->
-        <div>
-          <div class="entry-new-pet-button" >
-            <h3>¡REGISTRA OTRA MASCOTA!</h3>
-          </div>
-          <div class="entry-new-pet-button" >
-            <h3>¡REGISTRA OTRA MASCOTA!</h3>
-          </div>
-          <div class="entry-new-pet-button" >
-            <h3>¡REGISTRA OTRA MASCOTA!</h3>
-          </div>
+        </div>
+        <div v-else>
+          <entry-new-pet :showDogsForm="showDogsForm" />
+          <entry-new-pet :showDogsForm="showDogsForm" />
+          <entry-new-pet :showDogsForm="showDogsForm" />
         </div>
       </div>
     </section>
@@ -43,9 +38,10 @@
 import NavBar from '../generic-cmpts/NavBar.vue';
 import DogInfo from '../generic-cmpts/DogInfo.vue';
 import DogForm from './DogForm';
+import EntryNewPet from '../generic-cmpts/EntryNewPet.vue'
 
 export default {
-  components: { NavBar, DogInfo, DogForm },
+  components: { NavBar, DogInfo, DogForm, EntryNewPet },
   //props:['user'],
   data() {
     return {
@@ -54,7 +50,7 @@ export default {
         name: 'Mariana',
         lastName: 'Ruiz de Chávez Tamayo',
         img: require('../../assets/yorkshire-mini.jpg'),
-        pets:[{name: 'Koda', age: 5, size: 'inmensurable',
+        /* pets:[{name: 'Koda', age: 5, size: 'inmensurable',
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
         {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
@@ -66,8 +62,13 @@ export default {
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
           {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
-        ]
+        ] */
       }
+    }
+  },
+  methods: {
+    showDogsForm(){
+      this.entryNewPet = !this.entryNewPet;
     }
   }
 

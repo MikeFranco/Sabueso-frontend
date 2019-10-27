@@ -3,15 +3,15 @@
     <div class="opacidad">
       <v-app id="inspire">
         <v-form class="form" ref="form" v-model="valid" lazy-validation>
-          <v-text-field v-model="name" :rules="nameRules" label="Nombre" required></v-text-field>
+          <v-text-field v-model="createUser.name" :rules="nameRules" label="Nombre" required></v-text-field>
 
-          <v-text-field v-model="lastname" :rules="lastnameRules" label="Apellido" required></v-text-field>
+          <v-text-field v-model="createUser.lastname" :rules="lastnameRules" label="Apellido" required></v-text-field>
 
-          <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+          <v-text-field v-model="createUser.email" :rules="emailRules" label="E-mail" required></v-text-field>
 
-          <v-text-field v-model="mobile" :rules="mobileRules" label="Celular" required></v-text-field>
+          <v-text-field v-model="createUser.mobile" :rules="mobileRules" label="Celular" required></v-text-field>
 
-          <v-text-field type="password" v-model="password" :rules="passwordRules" label="Contraseña" required></v-text-field>
+          <v-text-field type="password" v-model="createUser.password" :rules="passwordRules" label="Contraseña" required></v-text-field>
 
           <v-checkbox
             v-model="checkbox"
@@ -20,7 +20,9 @@
             required
           ></v-checkbox>
 
-          <v-btn color="#B21779" class="mr-4" @click="reset">Reset Form</v-btn>
+          <v-btn color="#B21779" class="mr-4" @click="reset">Limpiar</v-btn>
+
+          <v-btn color="#678BEC" class="mr-4" @click="createNewUser">Crear Usuario</v-btn>
         </v-form>
       </v-app>
     </div>
@@ -33,11 +35,13 @@ export default {
     return {
       bckImg: require("../../assets/login.jpg"),
       valid: true,
-      name: "",
-      lastname:'',
-      email: "",
-      mobile:'',
-      password:'',
+      createUser:{
+        name: "",
+        lastname:'',
+        email: "",
+        mobile:'',
+        password:'',
+      },
       select: null,
       checkbox: false,
       lastnameRules:[
@@ -70,6 +74,16 @@ export default {
     },
     resetValidation() {
       this.$refs.form.resetValidation();
+    },
+    createNewUser(){
+
+      const body = this.createUser;
+      this.$axios.post('https://localhost:3000/user', body)
+        .then(() => this.$noty.success('Usuario creado correctamente'))
+        .catch(err => {
+          console.error(err);
+          this.$noty.error('Se ha producido un error, inténtalo más tarde')
+        })
     }
   }
 };
