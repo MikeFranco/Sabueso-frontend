@@ -56,6 +56,11 @@ export default {
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
       ],
     }
+  },
+  methods: {
+    getMissingCardDog(){
+      
+    }
   }
 }
 </script>
@@ -78,6 +83,11 @@ export default {
   width: 100%;
   overflow: hidden;
 }
+
+.missing-dogs-div {
+  height: 500px;
+}
+
 .main-btn-left {
   margin-left: 18%
 }
@@ -85,6 +95,10 @@ export default {
 .inner-card-container{
   display: flex;
   flex-wrap: nowrap;
+  position: relative;
+  min-height: 500px;
+  max-width: 50%;
+  padding-right: 2%
 }
 
 .main-btn-center,
@@ -95,6 +109,7 @@ export default {
 .dog-card-swiper {
   min-width: 100%;
   min-height: 350px;
+  padding-right: 5%
 }
 
 .missing-dogs-title {
