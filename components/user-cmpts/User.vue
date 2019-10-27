@@ -1,22 +1,22 @@
 <template>
   <section>
     <NavBar />
-    <section>
-      <div>
+    <section class="user-container" >
+      <div class="user-info">
         <img class="user-img" :src="user.img" :alt="user.name">
-        <div>
+        <div class="user-full-name" >
           <span class="user-name" > {{ user.name }} </span><br/>
           <span class="user-last-name"> {{ user.lastName }} </span>
         </div>
       </div>
-      <div>
+      <div class="global-dog-container" >
         <div class="row dog-card-container">
-          <DogInfo
-            class="col-md-4 d-flex align-items-stretch "
-            v-for="(dog, index) in user.pets"
-            :key="index"
-            :dog="dog"
-          />
+            <DogInfo
+              class="col-md-8 align-items-stretch "
+              v-for="(dog, index) in user.pets"
+              :key="index"
+              :dog="dog"
+            />
         </div>
       </div>
     </section>
@@ -74,10 +74,27 @@ export default {
   background-color: #678BEC;
 }
 
+.user-container {
+  display: flex;
+}
+
+.user-full-name {
+  text-align: center;
+}
+
+.user-info {
+  width: 50%;
+  padding-left: 10%;
+}
+
+.global-dog-container {
+  padding-right: 2%;
+}
+
 /* CSS del componente de home */
 .nav-bar {
   background-color:  #678BEC;
-  color: azure;
+  color: white;
   max-width: 100%;
 }
 
@@ -86,10 +103,8 @@ export default {
 }
 
 .dog-card-container{
-  background-color: #678BEC;
-  padding: 30px;
   max-height: 500px;
-  max-width: 100%;
+  width: 80%;
   overflow-y: auto;
 }
 .main-btn-left {
@@ -104,7 +119,7 @@ export default {
 .missing-dogs-title {
   text-align: center;
   font-size: 38px;
-  color: azure;
+  color: white;
   background-color: #678BEC;
   margin-top: 2%;
   padding-top: 1%;

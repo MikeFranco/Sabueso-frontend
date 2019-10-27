@@ -74,7 +74,7 @@ export default {
 <style scoped>
 .nav-bar {
   background-color:  #678BEC;
-  color: azure;
+  color: white;
   max-width: 100%;
 }
 
@@ -85,14 +85,15 @@ export default {
 .dog-card-container{
   background-color: #678BEC;
   padding: 30px;
-  max-height: 500px;
+  max-height: 425px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .adopt {
   display: flex;
-  background-color: azure;
+  background-color: white;
 }
 
 .adopt-card {
@@ -131,7 +132,7 @@ export default {
 .missing-dogs-title {
   text-align: center;
   font-size: 38px;
-  color: azure;
+  color: white;
   background-color: #678BEC;
   margin-top: 2%;
   padding-top: 1%;
@@ -158,12 +159,12 @@ button{
 }
 
 .adopt {
-  background-color: azure;
+  background-color: white;
 }
 
 .adopt-title {
   color: #B21779;
-  background-color: azure;
+  background-color: white;
   text-align: center;
   padding-top: 2%;
   padding-bottom: 1%;

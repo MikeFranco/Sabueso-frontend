@@ -47,13 +47,13 @@ h4 {
 .dog-text {
   flex:1;
   background-color: #678BEC;
-  color: azure;
+  color: white;
 }
 
 .dog-name {
   background-color: #B21779;
   text-align: center;
-  color: azure;
+  color: white;
   font-weight: bold;
   font-size: 25px;
 }

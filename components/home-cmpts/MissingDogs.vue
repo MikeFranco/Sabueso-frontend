@@ -54,7 +54,7 @@ export default {
 .dog-name {
   background-color: #B21779;
   text-align: center;
-  color: azure;
+  color: white;
   font-weight: bold;
   font-size: 25px;
 }
@@ -62,7 +62,7 @@ export default {
 .here-map {
   min-width: 100%;
   display: flex;
-  background-color: azure;
+  background-color: white;
 }
 
 .col-1 {
