@@ -1,48 +1,42 @@
 <template>
   <section>
-    <div class="nav-bar">
-      <NavBar/> <!-- //TODO Hay que hacer este nav bar -->
-    </div>
-    <div>
-      <!-- //TODO arreglar esta imagen porque  -->
-      <img class="first-screen-img" src="../../assets/FSI_1.png">
-    </div>
-      <button class="main-btn-left"> <v-icon size="70">{{ alertIcon }} </v-icon> </button>
-      <button class="main-btn-center">   <v-icon size="70">{{ pawIcon }} </v-icon> </button>
-      <button class="main-btn-right">  <v-icon size="70">{{ homeIcon }} </v-icon> </button>
-
-    <div class="missing-dogs-div" >
-      <div class="missing-dogs-title" >
-        <h1>Perros Extraviados</h1>
+    <NavBar />
+    <section>
+      <div>
+        <img class="user-img" :src="user.img" :alt="user.name">
+        <div>
+          <span class="user-name" > {{ user.name }} </span><br/>
+          <span class="user-last-name"> {{ user.lastName }} </span>
+        </div>
       </div>
-      <div class="dog-card-container">
-        <div class="inner-card-container">
-          <MissingDogs
-            class="dog-card-swiper"
-            v-for="(dog, index) in hardcodedItems"
+      <div>
+        <div class="row dog-card-container">
+          <DogInfo
+            class="col-md-4 d-flex align-items-stretch "
+            v-for="(dog, index) in user.pets"
             :key="index"
             :dog="dog"
           />
         </div>
       </div>
-    </div>
+    </section>
   </section>
 </template>
 
 <script>
-import NavBar from '~/components/generic-cmpts/NavBar.vue';
-import MissingDogs from '~/components/home-cmpts/MissingDogs.vue';
+import NavBar from '../generic-cmpts/NavBar.vue';
+import DogInfo from '../generic-cmpts/DogInfo.vue';
 
 export default {
-  components: { NavBar, MissingDogs },
-  data(){
+  components: { NavBar, DogInfo },
+  //props:['user'],
+  data() {
     return {
-      pawIcon: 'mdi-paw',
-      alertIcon: 'mdi-alert',
-      homeIcon: 'mdi-home',
-      hover: false,
-      hardcodedItems:[
-        {name: 'Koda', age: 5, size: 'inmensurable',
+      user:{
+        name: 'Mariana',
+        lastName: 'Ruiz de Chávez Tamayo',
+        img: require('../../assets/yorkshire-mini.jpg'),
+        pets:[{name: 'Koda', age: 5, size: 'inmensurable',
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
         {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')},{name: 'Chip', age: 5, size: 'microchip',
@@ -54,13 +48,33 @@ export default {
           description: 'Una descripción hardcodeada', img:require('../../assets/Koda.jpg')},
           {name: 'Chip', age: 5, size: 'microchip',
           description: 'Una descripción hardcodeada2', img:require('../../assets/Chip.jpg')}
-      ],
+        ]
+      }
     }
   }
+
+
 }
 </script>
 
 <style scoped>
+.user-img {
+  border-radius: 50%;
+}
+
+.user-name{
+  font-size: 50px;
+}
+
+.user-last-name {
+  font-size: 25px;
+}
+
+.user-pets {
+  background-color: #678BEC;
+}
+
+/* CSS del componente de home */
 .nav-bar {
   background-color:  #678BEC;
   color: azure;
@@ -75,26 +89,16 @@ export default {
   background-color: #678BEC;
   padding: 30px;
   max-height: 500px;
-  width: 100%;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-y: auto;
 }
 .main-btn-left {
   margin-left: 18%
 }
 
-.inner-card-container{
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .main-btn-center,
 .main-btn-right {
   margin-left: 25%
-}
-
-.dog-card-swiper {
-  min-width: 100%;
-  min-height: 350px;
 }
 
 .missing-dogs-title {

@@ -3,18 +3,9 @@
     <div class="dog-card">
       <div :style='`background-image: url(${dog.img})`' class="dog-image" >
       </div>
-        <div class="dog-name" > {{dog.name}} </div>
-        <div class="here-map" >
-          <!-- <Map
-            appId="DPVmzC3KXrz9Bk3wzpfR"
-            appCode="xpxcR1OHlqPK043UfzNHZQ"
-            lat="19.311274"
-            lng="-99.176742"
-            width="120%"
-            height="200px"
-          /> -->
-          {{dog.description}}
-        </div>
+      <div class="dog-text" >
+        {{dog.description}}
+      </div>
     </div>
   </section>
 </template>
@@ -35,13 +26,20 @@ export default {
   border-radius: 30px;
   overflow: hidden;
   text-align: center;
+  display: flex;
 }
 
 .dog-image {
   margin: auto auto;
-  min-height: 200px;
+  height: 200px;
   background-position: center;
   background-size: cover;
+  min-width: 33%;
+  align-items: left;
+}
+
+.dog-text {
+  flex:1;
 }
 
 .dog-name {

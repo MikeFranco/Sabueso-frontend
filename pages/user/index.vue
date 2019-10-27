@@ -1,14 +1,13 @@
 <template>
   <section>
-    <v-for>
-      
-    </v-for>
+    <User />
   </section>
 </template>
 
 <script>
+import User from '~/components/user-cmpts/User'
 export default {
-
+  components: { User }
 }
 </script>
 
