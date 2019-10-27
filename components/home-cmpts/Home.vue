@@ -55,13 +55,13 @@ export default {
       hover: false,
       hardcodedItems:[
           {name: 'Koda', age: 5, size: 'Grande',
-          description: 'Pastor Belga Malinois, cafe con pecho negro', img:require('../../assets/Koda.jpg')},
+          description: 'Pastor Belga', img:require('../../assets/Koda.jpg')},
           {name: 'Manchas', age: 1, size: 'Pequeño',
           description: 'Boston terrier', img:require('../../assets/perrito1.jpg')},
           {name: 'Link', age: 3, size: 'Pequeño',
           description: 'Maltipo blanco', img:require('../../assets/perrito2.jpg')},
           {name: 'Negro', age: 7, size: 'Grande',
-          description: 'Whippet, cafe con pecho blanco', img:require('../../assets/perrito3.jpg')}
+          description: 'Whippet café', img:require('../../assets/perrito3.jpg')}
       ],
     }
   }
@@ -124,6 +124,7 @@ export default {
 
 .dog-card-swiper {
   max-width: 120%;
+  min-width: 80%;
   max-height: 100%;
   padding-right: 5%;
 
