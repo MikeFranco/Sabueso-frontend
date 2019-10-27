@@ -143,7 +143,7 @@ export default {
 
 .dog-card-container{
   max-height: 500px;
-  width: 80%;
+  width: 100%;
   overflow-y: auto;
   align-items: center;
 }
