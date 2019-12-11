@@ -22,14 +22,15 @@
             />
             <entry-new-pet :showDogsForm="showDogsForm" />
         </div>
-        <div v-else-if="entryNewPet" class="dog-form">
+         <div v-else>
+          <entry-new-pet :showDogsForm="showDogsForm" />
+          <entry-new-pet :showDogsForm="showDogsForm" />
+          <entry-new-pet :showDogsForm="showDogsForm" />
+        </div>
+        <div v-if="entryNewPet" class="dog-form">
           <DogForm :showDogsForm="showDogsForm"/>
         </div>
-        <div v-else>
-          <entry-new-pet :showDogsForm="showDogsForm" />
-          <entry-new-pet :showDogsForm="showDogsForm" />
-          <entry-new-pet :showDogsForm="showDogsForm" />
-        </div>
+       
       </div>
     </section>
   </section>
